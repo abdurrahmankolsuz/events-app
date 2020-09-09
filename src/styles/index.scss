@@ -1,0 +1,20 @@
+$body-bg: #172C49;
+
+
+// Import Bootstrap and its default variables
+@import '~bootstrap/scss/bootstrap.scss';
+@import '_variables.scss';
+
+html,
+body,
+#root,
+.main-container {
+    height: 100vh;
+}
+
+.main-sub-container {
+    background-color: $body-grey;
+    height: 100vh;
+    margin-top: 50px;
+    margin-left: 50px;
+}
