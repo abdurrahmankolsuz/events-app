@@ -1,0 +1,12 @@
+.card-container {
+  &__yellow-edge {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 8px;
+  }
+  &.has-warning {
+    background-color: #faf5d5;
+  }
+}

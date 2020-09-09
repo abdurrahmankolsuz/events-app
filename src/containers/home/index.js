@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Card } from "../../components";
+import { EventList } from "./event-list";
 import "./_home.scss";
 
 const Home = () => {
@@ -11,30 +11,7 @@ const Home = () => {
           <div className="px-4">
             <strong>EVENTS</strong>
           </div>
-          <div className="pt-1">
-            <Card />
-          </div>
-          <div className="pt-1">
-            <Card />
-          </div>
-          <div className="pt-1">
-            <Card />
-          </div>
-          <div className="pt-1">
-            <Card />
-          </div>
-          <div className="pt-1">
-            <Card />
-          </div>
-          <div className="pt-1">
-            <Card />
-          </div>
-          <div className="pt-1">
-            <Card />
-          </div>
-          <div className="pt-1">
-            <Card />
-          </div>
+          <EventList />
         </div>
         <div className="col-4">
           <div className="px-4">
