@@ -6,15 +6,21 @@ $body-bg: #172C49;
 @import '_variables.scss';
 
 html,
-body,
-#root,
-.main-container {
+body {
     height: 100vh;
 }
 
+#root {
+    height: 100%;
+}
+
+.main-container {
+    height: 100%;
+    padding-left: 50px;
+    padding-top: 50px;
+}
+
 .main-sub-container {
+    height: 100%;
     background-color: $body-grey;
-    height: 100vh;
-    margin-top: 50px;
-    margin-left: 50px;
 }
