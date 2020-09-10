@@ -1,6 +1,7 @@
 import React from "react";
 
 import { EventList } from "./event-list";
+import { EventDetail } from "./event-detail";
 import "./_home.scss";
 
 const Home = () => {
@@ -14,8 +15,11 @@ const Home = () => {
           <EventList />
         </div>
         <div className="col-4">
-          <div className="px-4">
+          <div className="px-1">
             <strong>EVENT DETAILS</strong>
+          </div>
+          <div className="px-1 pt-1">
+            <EventDetail />
           </div>
         </div>
       </div>

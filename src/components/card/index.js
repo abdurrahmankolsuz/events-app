@@ -8,13 +8,13 @@ const Card = (props) => {
 
   return (
     <div
-      class={`card position-relative card-container ${
+      className={`card position-relative card-container ${
         hasWarning ? "has-warning" : ""
       }`}>
       {showEdge && (
         <div className="card-container__yellow-edge bg-warning"></div>
       )}
-      <div class="px-3 py-2">{props.children}</div>
+      <div className="px-3 py-2">{props.children}</div>
     </div>
   );
 };
