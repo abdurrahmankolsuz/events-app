@@ -221,6 +221,87 @@ const EventList = (props) => {
           </div>
         </Card>
       </div>
+      <div className="pt-1">
+        <Card>
+          <div className="d-flex align-items-center justify-content-between px-2">
+            <div className="d-flex flex-column">
+              <strong>test</strong>
+              <span>-</span>
+            </div>
+            <div className="d-flex flex-column">
+              <strong>test</strong>
+              <span>-</span>
+            </div>
+            <div className="d-flex flex-column">
+              <strong>test</strong>
+              <span>-</span>
+            </div>
+            <div className="d-flex flex-column">
+              <strong>test</strong>
+              <span>-</span>
+            </div>
+            <div className="d-flex flex-column">
+              <strong>test</strong>
+              <span>-</span>
+            </div>
+            <div className="d-flex flex-column">&nbsp;</div>
+          </div>
+        </Card>
+      </div>
+      <div className="pt-1">
+        <Card>
+          <div className="d-flex align-items-center justify-content-between px-2">
+            <div className="d-flex flex-column">
+              <strong>test</strong>
+              <span>-</span>
+            </div>
+            <div className="d-flex flex-column">
+              <strong>test</strong>
+              <span>-</span>
+            </div>
+            <div className="d-flex flex-column">
+              <strong>test</strong>
+              <span>-</span>
+            </div>
+            <div className="d-flex flex-column">
+              <strong>test</strong>
+              <span>-</span>
+            </div>
+            <div className="d-flex flex-column">
+              <strong>test</strong>
+              <span>-</span>
+            </div>
+            <div className="d-flex flex-column">&nbsp;</div>
+          </div>
+        </Card>
+      </div>
+      <div className="pt-1">
+        <Card>
+          <div className="d-flex align-items-center justify-content-between px-2">
+            <div className="d-flex flex-column">
+              <strong>test</strong>
+              <span>-</span>
+            </div>
+            <div className="d-flex flex-column">
+              <strong>test</strong>
+              <span>-</span>
+            </div>
+            <div className="d-flex flex-column">
+              <strong>test</strong>
+              <span>-</span>
+            </div>
+            <div className="d-flex flex-column">
+              <strong>test</strong>
+              <span>-</span>
+            </div>
+            <div className="d-flex flex-column">
+              <strong>test</strong>
+              <span>-</span>
+            </div>
+            <div className="d-flex flex-column">&nbsp;</div>
+          </div>
+        </Card>
+      </div>
     </>
   );
 };
