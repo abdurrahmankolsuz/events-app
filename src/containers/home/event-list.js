@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Card } from "../../components";
+import { Card, Button } from "../../components";
 
 const EventList = (props) => {
   return (
@@ -220,6 +220,7 @@ const EventList = (props) => {
             <div className="d-flex flex-column">&nbsp;</div>
           </div>
         </Card>
+        <Button color content="Apo"></Button>
       </div>
     </>
   );
