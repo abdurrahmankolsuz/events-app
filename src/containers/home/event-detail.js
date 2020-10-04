@@ -3,13 +3,19 @@ import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import { Map as LeafletMap, TileLayer, Marker, Popup } from "react-leaflet";
 
-import { Card } from "../../components";
+import { Button, Card } from "../../components";
 import "./_home.scss";
 
 const EventDetail = (props) => {
   return (
     <>
       <Card>
+
+
+  <Button color={false} content={"NO ACTION NEEDED"}></Button>
+  <Button color={true} content={"TAKE ACTION"}></Button>
+
+
         <Tabs>
           <TabList>
             <Tab>DETAILS</Tab>
