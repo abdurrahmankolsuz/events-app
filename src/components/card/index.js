@@ -7,7 +7,7 @@ const Card = (props) => {
   const { showEdge, hasWarning } = props;
 
   return (
-    <div onClick={e => console.log("Clicked")} 
+    <div  
       className={`card position-relative card-container ${
         hasWarning ? "has-warning" : ""
       }`}>

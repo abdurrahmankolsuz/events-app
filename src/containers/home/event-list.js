@@ -1,7 +1,6 @@
-import { array } from "prop-types";
 import React from "react";
 
-import { Card, Button } from "../../components";
+import { Card } from "../../components";
 
 const EventList = (props) => {
 

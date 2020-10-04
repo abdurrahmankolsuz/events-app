@@ -7,7 +7,7 @@ const Button = (props) => {
   const { color, content } = props;
 
   return (
-  <button type="button" class={`btn ${
+  <button  type="button" className={`btn ${
     color ? "btn-success" : "btn-secondary"
   } m-1`}>{content}</button>
  )
@@ -20,7 +20,7 @@ Button.propTypes = {
 
 Button.defaultProps = {
   color: false,
-  content: "TAKE ACTION",
+  content: "",
 };
 
 export { Button };
