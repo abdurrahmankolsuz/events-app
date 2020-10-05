@@ -6,8 +6,6 @@ import "./_home.scss";
 import example_response from './response.js'; 
 
 const Home = () => {
-  console.log(example_response.data);
-  console.log(JSON.stringify(example_response.data));
   return (
     <div className="home-container container-fluid px-0">
       <div className="row home-container__sub-container">

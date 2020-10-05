@@ -3,17 +3,25 @@ import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import { Map as LeafletMap, TileLayer, Marker, Popup } from "react-leaflet";
 
-import { Button, Card, ResultCard } from "../../components";
+import { Button, Card, MyModal } from "../../components";
 import "./_home.scss";
 
 const EventDetail = (props) => {
+  const [isOpen, setIsOpen] = React.useState(false);
+  const showModal = () => {
+    setIsOpen(true);
+  };
+
   return (
     <>
       <Card>
         <div className="d-flex flex-row">
-          <Button color={false} content={"NO ACTION NEEDED"}></Button>
-          <Button color={true} content={"TAKE ACTION"}></Button>
-
+          <Button onClick={showModal} color={false} content={"NO ACTION NEEDED"} show={isOpen} setIsOpen={setIsOpen}></Button>
+          <Button onClick={() => {
+            setTimeout(() => {
+              alert("Another button clicked!");
+            }, 1000)
+          }}  color={true} content={"TAKE ACTION"}></Button>
         </div>
         <Tabs>
           <TabList>
@@ -50,7 +58,7 @@ const EventDetail = (props) => {
             <h2>Any content 3</h2>
           </TabPanel>
           <TabPanel>
-            <ResultCard />
+            <MyModal/>
           </TabPanel>
         </Tabs>
       </Card>
