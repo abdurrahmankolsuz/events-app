@@ -3,12 +3,8 @@ import PropTypes from "prop-types";
 
 import { Modal } from "react-bootstrap";
 
-import success from "../../styles/icons/success.svg";
-import loading from "../../styles/icons/loading.svg";
-import failed from "../../styles/icons/failed.svg";
-import x from "../../styles/icons/x.svg";
-
 import "./_modal.scss";
+import { Wizard } from "../wizard";
 
 const MyModal = (props) => {
   const { icon, color, header, content, show, setIsOpen } = props;
@@ -21,11 +17,13 @@ const MyModal = (props) => {
     >
       <Modal.Header className="header" closeButton>
       </Modal.Header>
-      <Modal.Body className="body">
-        <object data={success} type="image/svg+xml" width="56" height="56"></object>
-        <h5 className="card-title p-2 my-2 success">{header}</h5>
-        <p className="card-text pb-3">{content}</p>
-      </Modal.Body>
+  {/*     <Modal.Body className="body">
+        <object data={icon} type="image/svg+xml" width="56" height="56"></object>
+        <h5 className={`title p-2 my-2 ${color ? "success" : "failed"
+          }`}>{header}</h5>
+        <p className="content pb-3">{content}</p>
+      </Modal.Body> */}
+      <Wizard/>
       <Modal.Footer className="footer"></Modal.Footer>
     </Modal>
 

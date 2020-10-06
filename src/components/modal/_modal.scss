@@ -1,17 +1,19 @@
 @import '../../styles/index.scss';
-.card-title {
+.title {
     &.failed{
-        color: #D92323;
+        color: $failed-color;
     }
     &.success{
-        color: #3DA836;
+        color: $success-color;
     }
   
 }
-    .header,.footer{
+    .header, 
+    .footer{
        border: 0;
     }
     .body{
         text-align:center;
     }
+
 
