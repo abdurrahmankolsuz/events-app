@@ -1,0 +1,33 @@
+@import '../../styles/variables';
+
+.moving-tab{
+    background-color: $primary_color ;
+    height:4px;
+}
+
+.card{
+    background-color: white;
+    border:0
+}
+.card-footer{
+    background-color: white;
+    border:0
+}
+.card-header{
+    background-color: white;
+    border-style: none none solid none;
+    border-bottom-width: 2px;
+    padding-bottom: 0;
+    border-color:$secondary-color;
+}
+.nav-item{
+    background-color: white;
+}
+.nav-link{
+    font-weight: bold;
+    color:$secondary-color;
+    text-align: center;
+}
+.badge{
+    margin-right:0.25rem;
+}

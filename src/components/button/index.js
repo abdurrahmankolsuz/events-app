@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes, { func } from "prop-types";
+import PropTypes from "prop-types";
 
 import "./_button.scss";
 import { MyModal } from "../../components";
@@ -7,7 +7,7 @@ import { MyModal } from "../../components";
 import loading from "../../styles/icons/loading.svg";
 import failed from "../../styles/icons/failed.svg";
 import success from "../../styles/icons/success.svg";
-import x from "../../styles/icons/x.svg";
+/* import x from "../../styles/icons/x.svg"; */
 
 const Button = (props) => {
   const { color, content, onClick, show, setIsOpen } = props;

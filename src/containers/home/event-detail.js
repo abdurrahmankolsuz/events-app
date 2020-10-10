@@ -3,7 +3,7 @@ import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import { Map as LeafletMap, TileLayer, Marker, Popup } from "react-leaflet";
 
-import { Button, Card, MyModal, Wizard } from "../../components";
+import { Button, Card } from "../../components";
 import "./_home.scss";
 
 const EventDetail = (props) => {
@@ -29,7 +29,6 @@ const EventDetail = (props) => {
           <TabList>
             <Tab>DETAILS</Tab>
             <Tab>LOCATION</Tab>
-            <Tab>MEDIA</Tab>
             <Tab>MEDIA</Tab>
           </TabList>
           <TabPanel>
@@ -57,9 +56,6 @@ const EventDetail = (props) => {
           </TabPanel>
           <TabPanel>
             <h2>Any content 3</h2>
-          </TabPanel>
-          <TabPanel>
-            <Wizard/>
           </TabPanel>
         </Tabs>
       </Card>

@@ -1,5 +1,5 @@
 import React from "react";
-import ReactWizard from "react-bootstrap-wizard";
+import ReactWizard from "./ReactWizard";
 import { Container, Row, Col } from "reactstrap";
 import FirstStep from "./first-step"
 import SecondStep from "./second-step"
@@ -10,9 +10,9 @@ class Wizard extends React.Component {
         this.state = {
              steps : [
                 // this step hasn't got a isValidated() function, so it will be considered to be true
-                { stepName: "First", component: FirstStep },
+                { stepName: "SELECT ACTION", component: FirstStep },
                 // this step will be validated to false
-                { stepName: "Second", component: SecondStep }
+                { stepName: "TAKE ACTION", component: SecondStep }
               ]
               
         };
@@ -23,20 +23,15 @@ class Wizard extends React.Component {
     }
     render() {
       return (
-        <Container fluid style={{ marginTop: "15px" }}>
-          <Row>
-            <Col xs={12} md={6} className="mr-auto ml-auto">
+        <Container fluid>
               <ReactWizard
                 steps={this.state.steps}
                 title=""
                 description=""
-                headerTextCenter
                 validate
                 color="primary"
                 finishButtonClick={this.finishButtonClick}
               />
-            </Col>
-          </Row>
         </Container>
       );
     }

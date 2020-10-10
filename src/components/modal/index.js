@@ -7,7 +7,7 @@ import "./_modal.scss";
 import { Wizard } from "../wizard";
 
 const MyModal = (props) => {
-  const { icon, color, header, content, show, setIsOpen } = props;
+  const { /* icon, color, header, content, */ show, setIsOpen } = props;
 
   return (
     <Modal
