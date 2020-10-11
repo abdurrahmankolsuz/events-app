@@ -1,5 +1,5 @@
 import React from "react";
-import ReactWizard from "./ReactWizard";
+import ReactWizard from "./react-wizard";
 import { Container, Row, Col } from "reactstrap";
 import FirstStep from "./first-step"
 import SecondStep from "./second-step"
@@ -19,7 +19,7 @@ class Wizard extends React.Component {
       }
 
     finishButtonClick(allStates) {
-      console.log(allStates);
+    
     }
     render() {
       return (

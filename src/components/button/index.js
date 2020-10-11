@@ -21,7 +21,7 @@ const Button = (props) => {
     <>
       <button onClick={onClick} type="button" className={`btn ${color ? "btn-success" : "btn-secondary"
         } m-1`}>{content}</button>
-      <MyModal icon={types.FAILED} header={"A PROBLEM OCCURED"} content={"We cannot continue due to a problem. Please try again later."} color={false} show={show} setIsOpen={setIsOpen} />
+      <MyModal hasWizard={false} icon={types.FAILED} header={"A PROBLEM OCCURED"} content={"We cannot continue due to a problem. Please try again later."} color={false} show={show} setIsOpen={setIsOpen} />
     </>
   )
 };

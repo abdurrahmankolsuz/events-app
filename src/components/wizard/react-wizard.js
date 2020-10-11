@@ -252,7 +252,7 @@ class ReactWizard extends React.Component {
                                                     <NavLink
                                                         onClick={() => this.navigationStepChange(key)}
                                                     >
-                                                        <p><span class="badge badge-dark">{key + 1}</span>{prop.stepName}</p>
+                                                        <p><span className="badge badge-pill badge-dark">{key + 1}</span>{prop.stepName}</p>
                                                     </NavLink>
                                                 </NavItem>
                                             );
