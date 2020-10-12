@@ -21,7 +21,7 @@ const EventDetail = (props) => {
       <Card>
         {isActionRequired &&
           <div className="d-flex flex-row">
-            <Button onClick={setActionRequired}  color={false} content={"NO ACTION NEEDED"} ></Button>
+            <Button onClick={setActionRequired} color={false} content={"NO ACTION NEEDED"} ></Button>
             <Button onClick={showModal} color={true} content={"TAKE ACTION"} show={isOpen} setIsOpen={setIsOpen}></Button>
           </div>
         }
@@ -51,7 +51,7 @@ const EventDetail = (props) => {
                 <Marker position={[50, 10]}>
                   <Popup>Popup for any custom information.</Popup>
                 </Marker>
-              </LeafletMap>{" "}
+              </LeafletMap>
             </div>
           </TabPanel>
           <TabPanel>

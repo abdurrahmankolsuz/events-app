@@ -1,40 +1,47 @@
 @import '../../styles/variables';
 
-.moving-tab{
-    background-color: $primary_color ;
-    height:4px;
+.moving-tab {
+    background-color: $primary_color;
+    height: 4px;
 }
 
-.card{
+.card {
     background-color: white;
-    border:0;
+    border: 0;
 }
-.card-footer{
+
+.card-footer {
     background-color: white;
-    border:0
+    border: 0
 }
-.card-header{
+
+.card-header {
     background-color: white;
     border-style: none none solid none;
     border-bottom-width: 2px;
     padding-bottom: 0;
-    border-color:$secondary-color;
+    border-color: $secondary-color;
 }
-.nav-item{
+
+.nav-item {
     background-color: white;
 }
-.nav-link{
+
+.nav-link {
     font-weight: bold;
-    color:$secondary-color;
+    color: $secondary-color;
     text-align: center;
 }
-.deactive-step{
-    opacity:0.3;
+
+.deactive-step {
+    opacity: 0.3;
 }
-.badge{
-    margin-right:0.25rem;
+
+.badge {
+    margin-right: 0.25rem;
 }
-.text-area{
+
+.text-area {
     font-weight: bold;
     font-size: 0.90rem;
 

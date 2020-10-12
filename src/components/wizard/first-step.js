@@ -1,6 +1,6 @@
 import React from "react";
 import { Card } from "../../components";
-import "./_wizard.scss"; 
+import "./_wizard.scss";
 export default class FirstStep extends React.Component {
   constructor(props) {
     super(props);

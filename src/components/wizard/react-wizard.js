@@ -249,8 +249,8 @@ class ReactWizard extends React.Component {
                                             return (
                                                 <NavItem className="nav-item" key={key} style={{ width: this.state.width }}>
                                                     <NavLink onClick={() => this.navigationStepChange(key)}>
-                                                        {this.state.currentStep === key ? <p><span className="badge badge-pill badge-dark">{key + 1}</span>{prop.stepName}</p>:
-                                                        <p className="deactive-step"><span className="badge badge-pill badge-dark">{key + 1}</span>{prop.stepName}</p> 
+                                                        {this.state.currentStep === key ? <p><span className="badge badge-pill badge-dark">{key + 1}</span>{prop.stepName}</p> :
+                                                            <p className="deactive-step"><span className="badge badge-pill badge-dark">{key + 1}</span>{prop.stepName}</p>
                                                         }
                                                     </NavLink>
                                                 </NavItem>

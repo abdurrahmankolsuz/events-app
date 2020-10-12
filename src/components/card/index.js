@@ -7,12 +7,10 @@ const Card = (props) => {
   const { insideStep, showEdge, hasWarning } = props;
 
   return (
-    <div  
-      className={`card shadow position-relative card-container ${
-        hasWarning ? "has-warning" : "" 
-      } ${
-        insideStep ? "inside-step" : "" 
-      }`}>
+    <div
+      className={`card shadow position-relative card-container ${hasWarning ? "has-warning" : ""
+        } ${insideStep ? "inside-step" : ""
+        }`}>
       {showEdge && (
         <div className="card-container__yellow-edge bg-warning"></div>
       )}

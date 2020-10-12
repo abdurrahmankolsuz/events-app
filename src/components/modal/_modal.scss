@@ -1,20 +1,21 @@
 @import '../../styles/index.scss';
+
 .title {
-    &.failed{
+    &.failed {
         color: $failed-color;
     }
-    &.success{
+
+    &.success {
         color: $success-color;
     }
-  
+
 }
-    .header, 
-    .footer{
-       border: 0;
-    }
-    .body{
-        text-align:center;
-    }
-    
 
+.header,
+.footer {
+    border: 0;
+}
 
+.body {
+    text-align: center;
+}
