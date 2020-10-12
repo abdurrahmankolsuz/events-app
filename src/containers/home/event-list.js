@@ -3,8 +3,7 @@ import React from "react";
 import { Card } from "../../components";
 
 const EventList = (props) => {
-
-
+  
   const listItems = props.data.map((key,data) =>
   <div key={key.id} className="pt-1">
     <Card showEdge={true} hasWarning={true}>

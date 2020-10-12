@@ -1,5 +1,6 @@
 import React from "react";
 import { Card } from "../../components";
+import "./_wizard.scss"; 
 export default class FirstStep extends React.Component {
   constructor(props) {
     super(props);
@@ -8,8 +9,8 @@ export default class FirstStep extends React.Component {
     };
   }
   render() {
-    return <div>
-      <Card>
+    return <>
+      <Card insideStep={true}>
         <div className="d-flex align-items-center justify-content-between px-2 py-2">
           <div className="d-flex flex-column">
             <strong>Mark As Resolved</strong>
@@ -18,7 +19,7 @@ export default class FirstStep extends React.Component {
         </div>
       </Card>
 
-      <Card>
+      <Card insideStep={true}>
         <div className="d-flex align-items-center justify-content-between px-2 py-2">
           <div className="d-flex flex-column">
             <strong>Change Asset</strong>
@@ -26,6 +27,6 @@ export default class FirstStep extends React.Component {
           </div>
         </div>
       </Card>
-    </div>
+    </>
   }
 }

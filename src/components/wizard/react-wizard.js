@@ -229,8 +229,7 @@ class ReactWizard extends React.Component {
                 <Card className="card card-wizard active">
                     {this.props.title !== undefined ||
                         this.props.description !== undefined ? (
-                            <CardHeader className="card-header"
-                            >
+                            <CardHeader className="card-header">
                                 {this.props.title !== undefined ? (
                                     <CardTitle tag="h3">{this.props.title}</CardTitle>
                                 ) : null}
@@ -249,10 +248,10 @@ class ReactWizard extends React.Component {
                                         {this.props.steps.map((prop, key) => {
                                             return (
                                                 <NavItem className="nav-item" key={key} style={{ width: this.state.width }}>
-                                                    <NavLink
-                                                        onClick={() => this.navigationStepChange(key)}
-                                                    >
-                                                        <p><span className="badge badge-pill badge-dark">{key + 1}</span>{prop.stepName}</p>
+                                                    <NavLink onClick={() => this.navigationStepChange(key)}>
+                                                        {this.state.currentStep === key ? <p><span className="badge badge-pill badge-dark">{key + 1}</span>{prop.stepName}</p>:
+                                                        <p className="deactive-step"><span className="badge badge-pill badge-dark">{key + 1}</span>{prop.stepName}</p> 
+                                                        }
                                                     </NavLink>
                                                 </NavItem>
                                             );

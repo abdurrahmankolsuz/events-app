@@ -3,7 +3,7 @@ import React from "react";
 import { EventList } from "./event-list";
 import { EventDetail } from "./event-detail";
 import "./_home.scss";
-import example_response from './response.js'; 
+import example_response from '../../data/response.js'; 
 
 const Home = () => {
   return (

@@ -16,8 +16,7 @@ const MyModal = (props) => {
       onHide={() => setIsOpen(false)}
       centered
     >
-      <Modal.Header className="header" closeButton>
-      </Modal.Header>
+      <Modal.Header className="header" closeButton/>
       {hasWizard ? (
         <Modal.Body className="body">
           <object data={icon} type="image/svg+xml" width="56" height="56"></object>
@@ -26,7 +25,7 @@ const MyModal = (props) => {
           <p className="content pb-3">{content}</p>
         </Modal.Body>
       ) : <Wizard />}
-      <Modal.Footer className="footer"></Modal.Footer>
+      <Modal.Footer className="footer"/>
     </Modal>
 
   )

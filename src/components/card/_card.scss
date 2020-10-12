@@ -1,3 +1,4 @@
+@import '../../styles/variables.scss';
 .card-container {
   &__yellow-edge {
     position: absolute;
@@ -8,6 +9,11 @@
   }
   &.has-warning {
     background-color: #faf5d5;
+  }
+  &.inside-step{
+    background-color:#f4f4f4;
+    margin-top: 0.40rem;
+    font-size: 1rem;;
   }
 }
 .card-container:hover{

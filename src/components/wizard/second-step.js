@@ -21,10 +21,10 @@ export default class SecondStep extends React.Component {
           <span>Mark this event as resolved and enter the details of solution.</span>
         </div>
       </div>
-      <div class="form-group px-2">
-        <label className="bold">Resolution Detail*</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" ></textarea>
+      <div className="form-group px-2">
+        <label className="text-area">Resolution Detail*</label>
+        <textarea placeholder="Enter resolution detail..." className="form-control" ></textarea>
       </div>
-    </>;
+    </>
   }
 }

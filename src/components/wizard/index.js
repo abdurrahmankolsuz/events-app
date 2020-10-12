@@ -1,6 +1,6 @@
 import React from "react";
 import ReactWizard from "./react-wizard";
-import { Container, Row, Col } from "reactstrap";
+import { Container} from "reactstrap";
 import FirstStep from "./first-step"
 import SecondStep from "./second-step"
 

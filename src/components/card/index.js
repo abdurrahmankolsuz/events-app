@@ -4,12 +4,14 @@ import PropTypes from "prop-types";
 import "./_card.scss";
 
 const Card = (props) => {
-  const { showEdge, hasWarning } = props;
+  const { insideStep, showEdge, hasWarning } = props;
 
   return (
     <div  
-      className={`card position-relative card-container ${
-        hasWarning ? "has-warning" : ""
+      className={`card shadow position-relative card-container ${
+        hasWarning ? "has-warning" : "" 
+      } ${
+        insideStep ? "inside-step" : "" 
       }`}>
       {showEdge && (
         <div className="card-container__yellow-edge bg-warning"></div>
@@ -23,11 +25,13 @@ const Card = (props) => {
 Card.propTypes = {
   showEdge: PropTypes.bool,
   hasWarning: PropTypes.bool,
+  insideStep: PropTypes.bool,
 };
 
 Card.defaultProps = {
   showEdge: false,
   hasWarning: false,
+  insideStep: false,
 };
 
 
