@@ -306,7 +306,6 @@ class ReactWizard extends React.Component {
                                     onClick={() => this.previousButtonClick()} color={false} content={this.props.previousButtonText}
                                 />
                             ) : null}
-                            <div className="clearfix" />
                         </div>
                     </CardFooter>
                 </Card>

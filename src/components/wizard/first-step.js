@@ -5,25 +5,36 @@ export default class FirstStep extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      firstStep: "first step here"
+      arr: [
+        {
+          title: "Mark As Resolved",
+          body: "Mark this event as resolved and enter the details of solution.",
+          isSelected: false
+        }, {
+          title: "Change Asset",
+          body: "Change the asset with another one.",
+          isSelected: false
+        }
+      ]
     };
+
   }
   render() {
     return <>
-      <Card insideStep={true}>
+      <Card insideStep={true} isSelected={this.state.arr[0].isSelected} >
         <div className="d-flex align-items-center justify-content-between px-2 py-2">
           <div className="d-flex flex-column">
-            <strong>Mark As Resolved</strong>
-            <span>Mark this event as resolved and enter the details of solution.</span>
+            <strong>{this.state.arr[0].title}</strong>
+            <span>{this.state.arr[0].body}</span>
           </div>
         </div>
       </Card>
 
-      <Card insideStep={true}>
+      <Card insideStep={true} isSelected={this.state.arr[1].isSelected} onClick={() => { this.setState({ isSelected: !this.state.arr[1].isSelected }) }}>
         <div className="d-flex align-items-center justify-content-between px-2 py-2">
           <div className="d-flex flex-column">
-            <strong>Change Asset</strong>
-            <span>Change the asset with another one.</span>
+            <strong>{this.state.arr[1].title}</strong>
+            <span>{this.state.arr[1].body}</span>
           </div>
         </div>
       </Card>

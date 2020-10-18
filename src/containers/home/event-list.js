@@ -3,10 +3,11 @@ import React from "react";
 import { Card } from "../../components";
 
 const EventList = (props) => {
+  const {setDetail} = props;
 
-  const listItems = props.data.map((key, data) =>
-    <div key={key.id} className="pt-1">
-      <Card showEdge={true} hasWarning={true}>
+  const listItems = props.data.map((data, key) =>
+    <div key={data.id} className="pt-1">
+      <Card onClick={() => {setDetail(key)}} showEdge={true} hasWarning={true}>
         <div className="d-flex align-items-center justify-content-between px-2">
           <div className="d-flex flex-column">
             <strong>test</strong>
@@ -14,11 +15,11 @@ const EventList = (props) => {
           </div>
           <div className="d-flex flex-column">
             <strong>Type</strong>
-            <span>{key.type}</span>
+            <span>{data.type}</span>
           </div>
           <div className="d-flex flex-column">
             <strong>Bın ID</strong>
-            <span>{key.id}</span>
+            <span>{data.id}</span>
           </div>
           <div className="d-flex flex-column">
             <strong>test</strong>

@@ -4,13 +4,14 @@ import PropTypes from "prop-types";
 import "./_card.scss";
 
 const Card = (props) => {
-  const { insideStep, showEdge, hasWarning } = props;
+  const { insideStep, isSelected, onClick, showEdge, hasWarning } = props;
 
   return (
-    <div
+    <div onClick={onClick}
       className={`card shadow position-relative card-container ${hasWarning ? "has-warning" : ""
         } ${insideStep ? "inside-step" : ""
-        }`}>
+        } ${isSelected ? "selected" : ""
+      }`}>
       {showEdge && (
         <div className="card-container__yellow-edge bg-warning"></div>
       )}

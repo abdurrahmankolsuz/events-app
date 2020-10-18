@@ -5,12 +5,14 @@ $success-color: #3DA836;
 
 // Import Bootstrap and its default variables
 @import '~bootstrap/scss/bootstrap.scss';
+@import  '~leaflet/dist/leaflet.css';
 @import '_variables.scss';
 
 html,
 body {
     height: 100vh;
     font-size: 0.90em;
+    color: $secondary-color;
 }
 
 #root {
