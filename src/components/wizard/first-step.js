@@ -17,11 +17,20 @@ export default class FirstStep extends React.Component {
         }
       ]
     };
+    this.setFunc = this.setFunc.bind(this);
+  }
 
+ setFunc(key){
+    console.log("aaa  ")
+    let new_arr = this.state.arr;
+    new_arr[key] = { ...new_arr[key], isSelected: !new_arr[key].isSelected };
+
+
+    this.setState({ arr: new_arr })
   }
   render() {
     return <>
-      <Card insideStep={true} isSelected={this.state.arr[0].isSelected} >
+      <Card insideStep={true} isSelected={this.state.arr[0].isSelected} onClick={() => this.setFunc(0)} >
         <div className="d-flex align-items-center justify-content-between px-2 py-2">
           <div className="d-flex flex-column">
             <strong>{this.state.arr[0].title}</strong>
@@ -30,7 +39,7 @@ export default class FirstStep extends React.Component {
         </div>
       </Card>
 
-      <Card insideStep={true} isSelected={this.state.arr[1].isSelected} onClick={() => { this.setState({ isSelected: !this.state.arr[1].isSelected }) }}>
+      <Card insideStep={true} isSelected={this.state.arr[1].isSelected} onClick={() => this.setFunc(1)}>
         <div className="d-flex align-items-center justify-content-between px-2 py-2">
           <div className="d-flex flex-column">
             <strong>{this.state.arr[1].title}</strong>

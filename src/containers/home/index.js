@@ -6,12 +6,15 @@ import "./_home.scss";
 import example_response from '../../data/response.js';
 
 const Home = () => {
-const [dataList, setDataList] = React.useState(example_response.data)
-const [detail, setDetail] = React.useState(example_response.data[0])
+  const [dataList, setDataList] = React.useState(example_response.data)
+  const [detail, setDetail] = React.useState(example_response.data[0])
 
-const setDetailPage = (key) => {
-  setDetail(example_response.data[key]);
-};
+  const setDetailPage = (key) => {
+    setDetail(example_response.data[key]);
+/*     let arr = { ...example_response.data };
+    arr[key] = { ...arr[key], isSelected:true };
+    setDataList(arr); */
+  };
 
   return (
     <div className="home-container container-fluid px-0">
@@ -27,7 +30,7 @@ const setDetailPage = (key) => {
             <strong>EVENT DETAILS</strong>
           </div>
           <div className="px-1 pt-1">
-            <EventDetail detail={detail}/>
+            <EventDetail detail={detail} />
           </div>
         </div>
       </div>

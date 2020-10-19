@@ -2,10 +2,21 @@ import React from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import { Map as LeafletMap, TileLayer, Marker, Popup } from "react-leaflet";
-import 'leaflet/dist/leaflet.css';
-
+import L from 'leaflet';
 import { Button, Card } from "../../components";
 import "./_home.scss";
+import 'leaflet/dist/leaflet.css';
+
+L.Icon.Default.mergeOptions({
+  iconRetinaUrl: require('leaflet/dist/images/marker-icon-2x.png'),
+  iconUrl: require('leaflet/dist/images/marker-icon.png'),
+  shadowUrl: require('leaflet/dist/images/marker-shadow.png')
+});
+
+delete L.Icon.Default.prototype._getIconUrl;
+
+
+
 
 const EventDetail = (props) => {
   const { detail } = props;
@@ -50,9 +61,9 @@ const EventDetail = (props) => {
           </TabPanel>
           <TabPanel>
             <LeafletMap id="map-container"
-              center={[50, 10]}
-              zoom={6}
-              maxZoom={10}
+              center={[detail.location.latitude, detail.location.longitude]}
+              zoom={14}
+              maxZoom={15}
               attributionControl={true}
               zoomControl={true}
               doubleClickZoom={true}
@@ -67,7 +78,7 @@ const EventDetail = (props) => {
             </LeafletMap>
           </TabPanel>
           <TabPanel>
-            <img src="https://picsum.photos/200/300"></img>
+            <img className="img" src="https://picsum.photos/200/300"></img>
           </TabPanel>
         </Tabs>
       </Card>
