@@ -15,9 +15,6 @@ L.Icon.Default.mergeOptions({
 
 delete L.Icon.Default.prototype._getIconUrl;
 
-
-
-
 const EventDetail = (props) => {
   const { detail } = props;
   const [isOpen, setIsOpen] = React.useState(false);
@@ -28,7 +25,6 @@ const EventDetail = (props) => {
   const setActionRequired = () => {
     setIsActionRequired(false);
   };
-
 
   return (
     <>

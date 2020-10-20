@@ -6,14 +6,25 @@ import "./_home.scss";
 import example_response from '../../data/response.js';
 
 const Home = () => {
+  example_response.data.forEach(function (element) {
+    element.isSelected = false;
+  });
   const [dataList, setDataList] = React.useState(example_response.data)
   const [detail, setDetail] = React.useState(example_response.data[0])
 
   const setDetailPage = (key) => {
     setDetail(example_response.data[key]);
-/*     let arr = { ...example_response.data };
-    arr[key] = { ...arr[key], isSelected:true };
-    setDataList(arr); */
+    const newList = example_response.data.map((item,index) => {
+      if (index === key) {
+        const updatedItem = {
+          ...item,
+          isSelected: !item.isSelected,
+        };
+        return updatedItem;
+      }
+      return item;
+    });
+    setDataList(newList);
   };
 
   return (

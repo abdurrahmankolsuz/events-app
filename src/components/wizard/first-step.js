@@ -21,11 +21,8 @@ export default class FirstStep extends React.Component {
   }
 
  setFunc(key){
-    console.log("aaa  ")
     let new_arr = this.state.arr;
     new_arr[key] = { ...new_arr[key], isSelected: !new_arr[key].isSelected };
-
-
     this.setState({ arr: new_arr })
   }
   render() {
