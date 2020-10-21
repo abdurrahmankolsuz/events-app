@@ -17,33 +17,26 @@ export default class FirstStep extends React.Component {
         }
       ]
     };
-    this.setFunc = this.setFunc.bind(this);
+    this.setSelected = this.setSelected.bind(this);
   }
 
- setFunc(key){
+  setSelected(key) {
     let new_arr = this.state.arr;
     new_arr[key] = { ...new_arr[key], isSelected: !new_arr[key].isSelected };
     this.setState({ arr: new_arr })
   }
   render() {
     return <>
-      <Card insideStep={true} isSelected={this.state.arr[0].isSelected} onClick={() => this.setFunc(0)} >
-        <div className="d-flex align-items-center justify-content-between px-2 py-2">
-          <div className="d-flex flex-column">
-            <strong>{this.state.arr[0].title}</strong>
-            <span>{this.state.arr[0].body}</span>
+      {this.state.arr.map((item, index) =>
+        <Card insideStep={true} isSelected={item.isSelected} onClick={() => this.setSelected(index)} >
+          <div className="d-flex align-items-center justify-content-between px-2 py-2">
+            <div className="d-flex flex-column">
+              <strong>{item.title}</strong>
+              <span>{item.body}</span>
+            </div>
           </div>
-        </div>
-      </Card>
-
-      <Card insideStep={true} isSelected={this.state.arr[1].isSelected} onClick={() => this.setFunc(1)}>
-        <div className="d-flex align-items-center justify-content-between px-2 py-2">
-          <div className="d-flex flex-column">
-            <strong>{this.state.arr[1].title}</strong>
-            <span>{this.state.arr[1].body}</span>
-          </div>
-        </div>
-      </Card>
+        </Card>
+      )}
     </>
   }
 }

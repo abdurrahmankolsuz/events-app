@@ -42,18 +42,14 @@ const EventDetail = (props) => {
             <Tab>MEDIA</Tab>
           </TabList>
           <TabPanel>
-            <div className="d-flex align-items-center justify-content-between px-2">
-              <div className="d-flex flex-column">
-                <strong>test</strong>
-                <span>-</span>
-              </div>
-              <div className="d-flex flex-column">
-                <strong>test</strong>
-                <span>-</span>
-              </div>
-              <div className="d-flex flex-column">&nbsp;</div>
+            <div className="d-flex flex-wrap align-items-center justify-content-between px-2">
+              {detail.details.map((item, index) =>
+                <div className="d-flex flex-column w-50 py-3">
+                  <strong>{item.title}</strong>
+                  <span>{item.value}</span>
+                </div>
+              )}
             </div>
-            <h2>{detail.details[detail.details.length - 1].value}</h2>
           </TabPanel>
           <TabPanel>
             <LeafletMap id="map-container"
