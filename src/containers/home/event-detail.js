@@ -23,6 +23,7 @@ const EventDetail = (props) => {
     setIsOpen(true);
   };
   const setActionRequired = () => {
+    console.log("test")
     setIsActionRequired(false);
   };
 
@@ -44,7 +45,7 @@ const EventDetail = (props) => {
           <TabPanel>
             <div className="d-flex flex-wrap align-items-center justify-content-between px-2">
               {detail.details.map((item, index) =>
-                <div className="d-flex flex-column w-50 py-3">
+                <div key={index} className="d-flex flex-column w-50 py-3">
                   <strong>{item.title}</strong>
                   <span>{item.value}</span>
                 </div>
