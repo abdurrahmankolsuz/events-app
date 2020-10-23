@@ -6,7 +6,7 @@ const EventList = (props) => {
   const { setDetail } = props;
 
   const listItems = props.data.map((data, key) =>
-    <div key={data.id} className="pt-1">
+    <div key={data.id} className="pt-1 py-1">
       <Card onClick={() => { setDetail(key) }} showEdge={true} hasWarning={data.isSelected}>
         <div className="d-flex align-items-center justify-content-between px-2">
           <div className="d-flex flex-column flex-even">
