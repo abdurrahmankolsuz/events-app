@@ -16,7 +16,7 @@ L.Icon.Default.mergeOptions({
 delete L.Icon.Default.prototype._getIconUrl;
 
 const EventDetail = (props) => {
-  const {isActionRequired, detail,setRow } = props;
+  const {detail,setRow } = props;
   const [isOpen, setIsOpen] = React.useState(false);
   const showModal = () => {
     setIsOpen(true);
@@ -24,7 +24,9 @@ const EventDetail = (props) => {
   return (
     <>
       <Card>
-        {isActionRequired &&
+        {!(detail.details.find(function (elem) {
+              return elem.title === 'Aksiyon';
+            }).value === "No Action Needed") &&
           <div className="d-flex flex-row">
             <Button onClick={setRow} color={false} content={"NO ACTION NEEDED"} ></Button>
             <Button onClick={showModal} color={true} content={"TAKE ACTION"} show={isOpen} setIsOpen={setIsOpen}></Button>

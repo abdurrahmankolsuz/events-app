@@ -11,10 +11,8 @@ const Home = () => {
   });
   const [dataList, setDataList] = React.useState(example_response.data)
   const [detail, setDetail] = React.useState(example_response.data[0])
-  const [isActionRequired, setIsActionRequired] = React.useState(true);
 
   const setDetailPage = (key) => {
-    setIsActionRequired(true);
     setDetail(example_response.data[key]);
     const newList = example_response.data.map((item, index) => {
       if (index === key) {
@@ -30,7 +28,6 @@ const Home = () => {
   };
 
   const setRow = () => {
-    setIsActionRequired(false);
     const newList = dataList.map((item) => {
       if (item.isSelected) {
         item.details = item.details.map((elem) => {
@@ -59,7 +56,7 @@ const Home = () => {
             <strong>EVENT DETAILS</strong>
           </div>
           <div className="px-1 pt-1">
-            <EventDetail isActionRequired={isActionRequired} setRow={setRow} detail={detail} />
+            <EventDetail setRow={setRow} detail={detail} />
           </div>
         </div>
       </div>

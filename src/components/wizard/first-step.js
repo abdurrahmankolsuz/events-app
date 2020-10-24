@@ -21,8 +21,21 @@ export default class FirstStep extends React.Component {
   }
 
   setSelected(key) {
-    let new_arr = this.state.arr;
-    new_arr[key] = { ...new_arr[key], isSelected: !new_arr[key].isSelected };
+/*     let new_arr = this.state.arr;
+    new_arr[key] = { ...new_arr[key], isSelected: !new_arr[key].isSelected }; */
+
+    const new_arr = this.state.arr.map((item, index) => {
+      if (index === key) {
+        const updatedItem = {
+          ...item,
+          isSelected: !item.isSelected,
+        };
+        return updatedItem;
+      }
+      return item;
+    });
+
+
     this.setState({ arr: new_arr })
   }
   render() {
