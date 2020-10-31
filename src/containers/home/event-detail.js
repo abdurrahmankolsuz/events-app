@@ -2,6 +2,7 @@ import React from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import { Map as LeafletMap, TileLayer, Marker, Popup } from "react-leaflet";
+import Moment from 'react-moment';
 import L from 'leaflet';
 import { Button, Card } from "../../components";
 import "./_home.scss";
@@ -16,14 +17,14 @@ L.Icon.Default.mergeOptions({
 delete L.Icon.Default.prototype._getIconUrl;
 
 const EventDetail = (props) => {
-  const {detail,setNoActionNeeded } = props;
+  const { detail, setNoActionNeeded } = props;
   const [isOpen, setIsOpen] = React.useState(false);
   return (
     <>
       <Card>
         {!(detail.details.find(function (elem) {
-              return elem.title === 'Aksiyon';
-            }).value === "Aksiyon Gerekmiyor") &&
+          return elem.title === 'Aksiyon';
+        }).value === "Aksiyon Gerekmiyor") &&
           <div className="d-flex flex-row">
             <Button onClick={setNoActionNeeded} color={false} content={"NO ACTION NEEDED"} ></Button>
             <Button onClick={setIsOpen} color={true} content={"TAKE ACTION"} show={isOpen} setIsOpen={setIsOpen}></Button>
@@ -40,7 +41,7 @@ const EventDetail = (props) => {
               {detail.details.map((item, index) =>
                 <div key={index} className="d-flex flex-column w-50 py-3">
                   <strong>{item.title}</strong>
-                  <span>{item.value}</span>
+                  {item.format === "date" ? <Moment date={item.value} format="YYYY/MM/DD hh:mm:ss" /> : <span>{item.value}</span>}
                 </div>
               )}
             </div>

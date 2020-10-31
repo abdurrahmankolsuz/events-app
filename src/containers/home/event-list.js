@@ -1,4 +1,5 @@
 import React from "react";
+import Moment from 'react-moment';
 
 import { Card } from "../../components";
 
@@ -7,13 +8,13 @@ const EventList = (props) => {
 
   const listItems = props.data.map((data, key) =>
     <div key={data.id} className="pt-1 py-1">
-      <Card onClick={() => { setDetail(key) }} showEdge={true} hasWarning={data.isSelected}>
+      <Card onClick={() => { setDetail(key) }} showEdge={data.isSelected} hasWarning={data.isSelected}>
         <div className="d-flex align-items-center justify-content-between px-2">
           <div className="d-flex flex-column flex-even">
             <strong>Date</strong>
-            <span>{data.details.find(function (elem) {
+            <span> <Moment date={data.details.find(function (elem) {
               return elem.format === 'date';
-            }).value}</span>
+            }).value} format="YYYY/MM/DD hh:mm:ss" /> </span>
           </div>
           <div className="d-flex flex-column flex-even">
             <strong>Type</strong>
