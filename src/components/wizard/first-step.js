@@ -1,18 +1,23 @@
 import React from "react";
 import { Card } from "../../components";
 import "./_wizard.scss";
+
+import string from '../../res/strings';
+
 export default class FirstStep extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       arr: [
         {
-          title: "Mark As Resolved",
-          body: "Mark this event as resolved and enter the details of solution.",
-          isSelected: false
+          id: 1,
+          title: string.wizard.step.first.heading,
+          body: string.wizard.step.first.text,
+          isSelected: true
         }, {
-          title: "Change Asset",
-          body: "Change the asset with another one.",
+          id: 2,
+          title: string.wizard.step.second.heading,
+          body: string.wizard.step.second.text,
           isSelected: false
         }
       ]
@@ -21,9 +26,6 @@ export default class FirstStep extends React.Component {
   }
 
   setSelected(key) {
-/*     let new_arr = this.state.arr;
-    new_arr[key] = { ...new_arr[key], isSelected: !new_arr[key].isSelected }; */
-
     const new_arr = this.state.arr.map((item, index) => {
       if (index === key) {
         const updatedItem = {
@@ -31,17 +33,22 @@ export default class FirstStep extends React.Component {
           isSelected: !item.isSelected,
         };
         return updatedItem;
+      } else {
+        const updatedItem = {
+          ...item,
+          isSelected: false,
+        };
+        return updatedItem;
       }
       return item;
     });
-
 
     this.setState({ arr: new_arr })
   }
   render() {
     return <>
       {this.state.arr.map((item, index) =>
-        <Card insideStep={true} isSelected={item.isSelected} onClick={() => this.setSelected(index)} >
+        <Card key={item.id} insideStep={true} isSelected={item.isSelected} onClick={() => this.setSelected(index)} >
           <div className="d-flex align-items-center justify-content-between px-2 py-2">
             <div className="d-flex flex-column">
               <strong>{item.title}</strong>

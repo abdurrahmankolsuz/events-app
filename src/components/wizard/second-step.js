@@ -3,8 +3,9 @@ export default class SecondStep extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      secondStep: "second step here"
+      value: ""
     };
+    this.handleChange = this.handleChange.bind(this);
   }
   isValidated() {
     // do some validations
@@ -12,6 +13,9 @@ export default class SecondStep extends React.Component {
     return true;
     // or you will
     // return false;
+  }
+  handleChange(event) {
+    this.setState({value: event.target.value});
   }
   render() {
     return <>
@@ -23,7 +27,7 @@ export default class SecondStep extends React.Component {
       </div>
       <div className="form-group px-2">
         <label className="text-area">Resolution Detail*</label>
-        <textarea placeholder="Enter resolution detail..." className="form-control" ></textarea>
+        <textarea value={this.state.value} onChange={this.handleChange} placeholder="Enter resolution detail..." className="form-control" ></textarea>
       </div>
     </>
   }

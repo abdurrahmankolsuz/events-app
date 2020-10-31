@@ -325,9 +325,6 @@ ReactWizard.defaultProps = {
 
 ReactWizard.propTypes = {
     color: PropTypes.oneOf(["primary", "green", "orange", "red", "blue"]),
-    previousButtonClasses: PropTypes.string,
-    finishButtonClasses: PropTypes.string,
-    nextButtonClasses: PropTypes.string,
     navSteps: PropTypes.bool,
     validate: PropTypes.bool,
     finishButtonClick: PropTypes.func,

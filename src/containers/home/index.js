@@ -6,8 +6,8 @@ import "./_home.scss";
 import example_response from '../../data/response.js';
 
 const Home = () => {
-  example_response.data.forEach(function (element) {
-    element.isSelected = false;
+  example_response.data.forEach(function (element, index) {
+      element.isSelected = false;
   });
   const [dataList, setDataList] = React.useState(example_response.data)
   const [detail, setDetail] = React.useState(example_response.data[0])
@@ -27,12 +27,12 @@ const Home = () => {
     setDataList(newList);
   };
 
-  const setRow = () => {
+  const setNoActionNeeded = () => {
     const newList = dataList.map((item) => {
       if (item.isSelected) {
         item.details = item.details.map((elem) => {
           if (elem.title === "Aksiyon") {
-            elem.value = "No Action Needed";
+            elem.value = "Aksiyon Gerekmiyor";
           }
           return elem;
         });
@@ -56,7 +56,7 @@ const Home = () => {
             <strong>EVENT DETAILS</strong>
           </div>
           <div className="px-1 pt-1">
-            <EventDetail setRow={setRow} detail={detail} />
+            <EventDetail setNoActionNeeded={setNoActionNeeded} detail={detail} />
           </div>
         </div>
       </div>
