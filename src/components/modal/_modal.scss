@@ -19,3 +19,16 @@
 .body {
     text-align: center;
 }
+
+.loader-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 99;
+    background: rgba(220,220,220, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

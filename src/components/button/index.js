@@ -2,18 +2,20 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import "./_button.scss";
-import { MyModal } from "../../components";
 
 const Button = (props) => {
-  const { color, content, onClick, show, setIsOpen } = props;
+  const { color, content, onClick } = props;
 
   return (
     <>
-      <button onClick={onClick} type="button" className={`btn ${color ? "btn-success" : "btn-secondary"
-        } m-1`}>{content}</button>
-      <MyModal hasWizard={true} show={show} setIsOpen={setIsOpen} />
+      <button
+        onClick={onClick}
+        type="button"
+        className={`btn ${color ? "btn-success" : "btn-secondary"} m-1`}>
+        {content}
+      </button>
     </>
-  )
+  );
 };
 
 Button.propTypes = {
